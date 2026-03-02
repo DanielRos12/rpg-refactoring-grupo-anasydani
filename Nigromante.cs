@@ -2,10 +2,21 @@ using System;
 
 namespace CIFPCarlosIII.ED.UT04.Grupo5
 {
+    /// <summary>
+    /// Representa un mago especializado en magia oscura.
+    /// Puede capturar almas e invocar no-muertos.
+    /// </summary>
     public class Nigromante : Mago
     {
+        /// <summary>
+        /// Número de almas capturadas.
+        /// </summary>
         public int almasCapturadas;
 
+        /// <summary>
+        /// Inicializa un nuevo nigromante con nombre.
+        /// </summary>
+        /// <param name="nombre">Nombre del nigromante.</param>
         public Nigromante(string nombre) : base(nombre)
         {
             almasCapturadas = 0;
@@ -13,6 +24,9 @@ namespace CIFPCarlosIII.ED.UT04.Grupo5
             Mana = 120;
         }
 
+        /// <summary>
+        /// Invoca un no-muerto consumiendo maná y un alma capturada.
+        /// </summary>
         public void InvocarNoMuerto()
         {
             if (Mana >= 40 && almasCapturadas >= 1)
@@ -28,12 +42,18 @@ namespace CIFPCarlosIII.ED.UT04.Grupo5
             }
         }
 
+        /// <summary>
+        /// Captura el alma de un enemigo derrotado.
+        /// </summary>
         public void CapturarAlma()
         {
             almasCapturadas++;
             Console.WriteLine(Nombre + " ha capturado un alma. Total: " + almasCapturadas);
         }
 
+        /// <summary>
+        /// Drena vida del enemigo para recuperarse.
+        /// </summary>
         public void DrenarVida()
         {
             if (Mana >= 25)

@@ -6,6 +6,10 @@
     <RootNamespace>ProyectoRPG</RootNamespace>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>disable</Nullable>
+    
+    <!-- Generar archivo de documentación XML -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
   </PropertyGroup>
 
 </Project>

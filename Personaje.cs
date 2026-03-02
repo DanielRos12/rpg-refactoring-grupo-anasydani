@@ -2,36 +2,64 @@ using System;
 
 namespace CIFPCarlosIII.ED.UT04.Grupo5
 {
-    
-public class Personaje
-{
-    public string Nombre { get; set; }  // encapsulado
-    public int vida;
-    public int nivel;
-
-    public Personaje(string nombre)
+    /// <summary>
+    /// Representa un personaje base del juego.
+    /// Contiene atributos y comportamientos comunes a todas las clases.
+    /// </summary>
+    public class Personaje
     {
-        Nombre = nombre;
-        vida = 100;
-        nivel = 1;
-    }
+        /// <summary>
+        /// Nombre del personaje.
+        /// </summary>
+        public string Nombre { get; set; }
 
-    public void Atacar()
-    {
-        Console.WriteLine(Nombre + " realiza un ataque básico!");
-    }
+        /// <summary>
+        /// Vida actual del personaje.
+        /// </summary>
+        public int vida;
 
-    public void RecibirDanio(int danio)
-    {
-        vida -= danio;
-        Console.WriteLine(Nombre + " recibe " + danio + " de daño. Vida restante: " + vida);
-    }
+        /// <summary>
+        /// Nivel actual del personaje.
+        /// </summary>
+        public int nivel;
 
-    public void SubirNivel()
-    {
-        nivel++;
-        vida += 20;
-        Console.WriteLine(Nombre + " ha subido al nivel " + nivel + "!");
+        /// <summary>
+        /// Inicializa un nuevo personaje con nombre.
+        /// </summary>
+        /// <param name="nombre">Nombre del personaje.</param>
+        public Personaje(string nombre)
+        {
+            Nombre = nombre;
+            vida = 100;
+            nivel = 1;
+        }
+
+        /// <summary>
+        /// Realiza un ataque básico.
+        /// </summary>
+        public void Atacar()
+        {
+            Console.WriteLine(Nombre + " realiza un ataque básico!");
+        }
+
+        /// <summary>
+        /// Reduce la vida del personaje según el daño recibido.
+        /// </summary>
+        /// <param name="danio">Cantidad de daño recibido.</param>
+        public void RecibirDanio(int danio)
+        {
+            vida -= danio;
+            Console.WriteLine(Nombre + " recibe " + danio + " de daño. Vida restante: " + vida);
+        }
+
+        /// <summary>
+        /// Incrementa el nivel del personaje y aumenta su vida.
+        /// </summary>
+        public void SubirNivel()
+        {
+            nivel++;
+            vida += 20;
+            Console.WriteLine(Nombre + " ha subido al nivel " + nivel + "!");
+        }
     }
-}
 }
