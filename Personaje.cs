@@ -8,10 +8,19 @@ namespace CIFPCarlosIII.ED.UT04.Grupo5
     /// </summary>
     public class Personaje
     {
-        /// <summary>
+        /// <summary>   
         /// Nombre del personaje.
         /// </summary>
-        public string Nombre { get; set; }
+        private string nombre;
+
+        /// <summary>
+        /// Propiedad para acceder al nombre del personaje.
+        /// </summary>
+        public string Nombre
+        {
+            get { return nombre; }
+            set { nombre = value; }
+        }
 
         /// <summary>
         /// Vida actual del personaje.
@@ -60,6 +69,19 @@ namespace CIFPCarlosIII.ED.UT04.Grupo5
             nivel++;
             vida += 20;
             Console.WriteLine(Nombre + " ha subido al nivel " + nivel + "!");
+        }
+
+        /// <summary>
+        /// Devuelve la información completa del personaje.
+        /// </summary>
+        /// <returns>Cadena con los datos básicos del personaje.</returns>
+        public virtual string MostrarInfo()
+        {
+            return "=== INFORMACIÓN DEL PERSONAJE ===" +
+                   "\nNombre: " + Nombre +
+                   "\nClase: " + this.GetType().Name +
+                   "\nNivel: " + nivel +
+                   "\nVida: " + vida;
         }
     }
 }

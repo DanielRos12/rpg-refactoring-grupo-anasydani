@@ -50,19 +50,12 @@ namespace CIFPCarlosIII.ED.UT04.Grupo5
         }
 
         /// <summary>
-        /// Devuelve la información completa del personaje.
+        /// Muestra la información completa del personaje.
         /// </summary>
         /// <returns>Cadena con todos los datos del berserker.</returns>
-        public string MostrarInfo()
+        public override string MostrarInfo()
         {
-            return "=== INFORMACIÓN DEL PERSONAJE ===" +
-                   "\nNombre: " + Nombre +
-                   "\nClase: " + GetType().Name +
-                   "\nNivel: " + nivel +
-                   "\nVida: " + vida +
-                   "\nFuerza: " + fuerza +
-                   "\nArma: " + arma +
-                   "\nFuria: " + furia;
+            return base.MostrarInfo();
         }
     }
 }

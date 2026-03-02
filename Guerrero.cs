@@ -24,8 +24,8 @@ namespace CIFPCarlosIII.ED.UT04.Grupo5
         /// <param name="nombre">Nombre del guerrero.</param>
         public Guerrero(string nombre) : base(nombre)
         {
-            fuerza = 15;
-            arma = "Espada";
+            this.fuerza = 15;
+            this.arma = "Espada";
         }
 
         /// <summary>

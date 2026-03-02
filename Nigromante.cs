@@ -19,9 +19,9 @@ namespace CIFPCarlosIII.ED.UT04.Grupo5
         /// <param name="nombre">Nombre del nigromante.</param>
         public Nigromante(string nombre) : base(nombre)
         {
-            almasCapturadas = 0;
-            hechizo = "Drenar vida";
-            Mana = 120;
+            this.almasCapturadas = 0;
+            this.hechizo = "Drenar vida";
+            this.Mana = 120;
         }
 
         /// <summary>

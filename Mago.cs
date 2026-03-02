@@ -24,8 +24,8 @@ namespace CIFPCarlosIII.ED.UT04.Grupo5
         /// <param name="nombre">Nombre del mago.</param>
         public Mago(string nombre) : base(nombre)
         {
-            Mana = 100;
-            hechizo = "Bola de fuego";
+            this.Mana = 100;
+            this.hechizo = "Bola de fuego";
         }
 
         /// <summary>
