@@ -1,6 +1,6 @@
 using System;
 
-namespace ProyectoRPG
+namespace CIFPCarlosIII.ED.UT04.Grupo5
 {
     public class Personaje
     {
