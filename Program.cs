@@ -1,52 +1,52 @@
 using System;
-
-namespace CIFPCarlosIII.ED.UT04.Grupo5
-{
-    class Program
+    namespace CIFPCarlosIII.ED.UT04.Grupo5
     {
-        static void Main(string[] args)
+        class Program
         {
-            Console.WriteLine("=== BIENVENIDO AL REINO DE LOS HÉROES ===\n");
+            static void Main(string[] args)
+            {
+                Console.WriteLine("=== BIENVENIDO AL REINO DE LOS HÉROES ===\n");
 
-            Personaje personaje = new Personaje();
-            personaje.nombre = "Héroe Genérico";
-            Console.WriteLine("Se ha creado un personaje: " + personaje.nombre);
-            personaje.Atacar();
-            personaje.SubirNivel();
+                // Personaje genérico
+                Personaje personaje = new Personaje("Héroe Genérico");
+                Console.WriteLine("Se ha creado un personaje: " + personaje.Nombre);
+                personaje.Atacar();
+                personaje.SubirNivel();
 
-            Console.WriteLine("\n--- Guerrero ---");
-            Guerrero guerrero = new Guerrero();
-            guerrero.nombre = "Guerrero Valiente";
-            guerrero.Atacar();
-            guerrero.AtaquePoderoso();
-            guerrero.DefenderseConEscudo();
+                Console.WriteLine("\n--- Guerrero ---");
+                Guerrero guerrero = new Guerrero("Guerrero Valiente");
+                Console.WriteLine("Se ha creado un guerrero: " + guerrero.Nombre);
+                guerrero.Atacar();
+                guerrero.AtaquePoderoso();
+                guerrero.DefenderseConEscudo();
 
-            Console.WriteLine("\n--- Berserker ---");
-            Berserker bers = new Berserker();
-            bers.nombre = "Destructor";
-            bers.EntrarEnFuria();
-            bers.EntrarEnFuria();
-            bers.AtaqueFurioso();
-            Console.WriteLine("\n" + bers.MostrarInfo());
+                Console.WriteLine("\n--- Berserker ---");
+                Berserker bers = new Berserker("Destructor");
+                Console.WriteLine("Se ha creado un berserker: " + bers.Nombre);
+                bers.EntrarEnFuria();
+                bers.EntrarEnFuria();
+                bers.AtaqueFurioso();
+                Console.WriteLine("\n" + bers.MostrarInfo());
 
-            Console.WriteLine("\n--- Mago ---");
-            Mago magi = new Mago();
-            magi.nombre = "Merlín";
-            magi.LanzarHechizo();
-            magi.LanzarHechizo();
-            magi.Meditar();
-            magi.LanzarHechizo();
+                Console.WriteLine("\n--- Mago ---");
+                Mago magi = new Mago("Merlín");
+                Console.WriteLine("Se ha creado un mago: " + magi.Nombre);
+                magi.LanzarHechizo();
+                magi.LanzarHechizo();
+                magi.Meditar();
+                magi.LanzarHechizo();
 
-            Console.WriteLine("\n--- Nigromante ---");
-            Nigromante nigro = new Nigromante();
-            nigro.nombre = "Señor Oscuro";
-            nigro.CapturarAlma();
-            nigro.CapturarAlma();
-            nigro.InvocarNoMuerto();
-            nigro.DrenarVida();
+                Console.WriteLine("\n--- Nigromante ---");
+                Nigromante nigro = new Nigromante("Señor Oscuro");
+                Console.WriteLine("Se ha creado un nigromante: " + nigro.Nombre);
+                nigro.CapturarAlma();
+                nigro.CapturarAlma();
+                nigro.InvocarNoMuerto();
+                nigro.DrenarVida();
 
-            Console.WriteLine("\n=== FIN DE LA DEMOSTRACIÓN ===");
-            Console.ReadLine();
+                Console.WriteLine("\n=== FIN DE LA DEMOSTRACIÓN ===");
+                Console.ReadLine();
+            }
         }
     }
-}
+

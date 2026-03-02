@@ -4,22 +4,22 @@ namespace CIFPCarlosIII.ED.UT04.Grupo5
 {
     public class Mago : Personaje
     {
-        public int mana;
+        public int Mana { get; set; }
         public string hechizo;
 
-        public Mago()
+        public Mago(string nombre) : base(nombre)
         {
-            this.mana = 100;
-            this.hechizo = "Bola de fuego";
+            Mana = 100;
+            hechizo = "Bola de fuego";
         }
 
         public void LanzarHechizo()
         {
-            if (mana >= 20)
+            if (Mana >= 20)
             {
-                Console.WriteLine(nombre + " lanza " + hechizo + "!");
-                mana -= 20;
-                Console.WriteLine("Mana restante: " + mana);
+                Console.WriteLine(Nombre + " lanza " + hechizo + "!");
+                Mana -= 20;
+                Console.WriteLine("Mana restante: " + Mana);
             }
             else
             {
@@ -29,9 +29,9 @@ namespace CIFPCarlosIII.ED.UT04.Grupo5
 
         public void Meditar()
         {
-            mana += 30;
-            if (mana > 100) mana = 100;
-            Console.WriteLine(nombre + " medita y recupera mana. Mana actual: " + mana);
+            Mana += 30;
+            if (Mana > 100) Mana = 100;
+            Console.WriteLine(Nombre + " medita y recupera mana. Mana actual: " + Mana);
         }
     }
 }

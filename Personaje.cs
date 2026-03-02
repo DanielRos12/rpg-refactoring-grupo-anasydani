@@ -2,34 +2,36 @@ using System;
 
 namespace CIFPCarlosIII.ED.UT04.Grupo5
 {
-    public class Personaje
+    
+public class Personaje
+{
+    public string Nombre { get; set; }  // encapsulado
+    public int vida;
+    public int nivel;
+
+    public Personaje(string nombre)
     {
-        public string nombre;
-        public int vida;
-        public int nivel;
-
-        public Personaje()
-        {
-            this.vida = 100;
-            this.nivel = 1;
-        }
-
-        public void Atacar()
-        {
-            Console.WriteLine(nombre + " realiza un ataque básico!");
-        }
-
-        public void RecibirDanio(int danio)
-        {
-            vida -= danio;
-            Console.WriteLine(nombre + " recibe " + danio + " de daño. Vida restante: " + vida);
-        }
-
-        public void SubirNivel()
-        {
-            nivel++;
-            vida += 20;
-            Console.WriteLine(nombre + " ha subido al nivel " + nivel + "!");
-        }
+        Nombre = nombre;
+        vida = 100;
+        nivel = 1;
     }
+
+    public void Atacar()
+    {
+        Console.WriteLine(Nombre + " realiza un ataque básico!");
+    }
+
+    public void RecibirDanio(int danio)
+    {
+        vida -= danio;
+        Console.WriteLine(Nombre + " recibe " + danio + " de daño. Vida restante: " + vida);
+    }
+
+    public void SubirNivel()
+    {
+        nivel++;
+        vida += 20;
+        Console.WriteLine(Nombre + " ha subido al nivel " + nivel + "!");
+    }
+}
 }

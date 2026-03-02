@@ -6,19 +6,19 @@ namespace CIFPCarlosIII.ED.UT04.Grupo5
     {
         public int almasCapturadas;
 
-        public Nigromante()
+        public Nigromante(string nombre) : base(nombre)
         {
-            this.almasCapturadas = 0;
-            this.hechizo = "Drenar vida";
-            this.mana = 120;
+            almasCapturadas = 0;
+            hechizo = "Drenar vida";
+            Mana = 120;
         }
 
         public void InvocarNoMuerto()
         {
-            if (mana >= 40 && almasCapturadas >= 1)
+            if (Mana >= 40 && almasCapturadas >= 1)
             {
-                Console.WriteLine(nombre + " invoca un no-muerto usando un alma capturada!");
-                mana -= 40;
+                Console.WriteLine(Nombre + " invoca un no-muerto usando un alma capturada!");
+                Mana -= 40;
                 almasCapturadas--;
                 Console.WriteLine("Almas restantes: " + almasCapturadas);
             }
@@ -31,15 +31,15 @@ namespace CIFPCarlosIII.ED.UT04.Grupo5
         public void CapturarAlma()
         {
             almasCapturadas++;
-            Console.WriteLine(nombre + " ha capturado un alma. Total: " + almasCapturadas);
+            Console.WriteLine(Nombre + " ha capturado un alma. Total: " + almasCapturadas);
         }
 
         public void DrenarVida()
         {
-            if (mana >= 25)
+            if (Mana >= 25)
             {
-                Console.WriteLine(nombre + " drena la vida de su enemigo!");
-                mana -= 25;
+                Console.WriteLine(Nombre + " drena la vida de su enemigo!");
+                Mana -= 25;
                 vida += 15;
                 Console.WriteLine("Vida recuperada. Vida actual: " + vida);
             }
